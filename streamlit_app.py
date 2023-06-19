@@ -34,13 +34,14 @@ if showMap:
   embedding = get_model().encode([interp])
   input = embedding - get_mean_sub()
   your_point = np.matmul(input, get_transform())
-  
+
+  st.title(interp)
   fig_handle = pl.load(open('kde.pickle','rb'))
   ax = fig_handle.get_axes()
   #fig_handle.title(interp)
   ax[0].scatter(your_point[:,0], your_point[:,1], color='k', s=100)
   ax[0].scatter(your_point[:,0], your_point[:,1], color='tab:red', s=50)
-  ax[0].set_title("\""+interp+"\"", fontsize=30)
+  #ax[0].set_title("\""+interp+"\"", fontsize=30)
   st.pyplot(fig_handle)
 
 
