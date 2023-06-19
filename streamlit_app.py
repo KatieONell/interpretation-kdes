@@ -23,9 +23,9 @@ def get_model():
 model = get_model()
 
 #after submitting an interpretation
-if submit_button:
-  st.write(interp)
-  embeddings = model.encode([interp])
-  st.write(str(embeddings))
+#if submit_button:
+#  st.write(interp)
+#  embeddings = model.encode([interp])
+#  st.write(str(embeddings))
 
   
