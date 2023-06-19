@@ -7,7 +7,7 @@ with placeholder.container():
   form = st.form(key='my_form')
   interp = form.text_input(label="What is the relationship between these two people? Who are they to each other?")
   submit_button = form.form_submit_button(label='Submit')
-  if submit:
+  if submit_button:
     st.write(interp)
     placeholder.empty()
   
