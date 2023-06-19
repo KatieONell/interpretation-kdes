@@ -8,6 +8,8 @@ import numpy as np
 def get_model():
   return SentenceTransformer('all-mpnet-base-v2')
 
+def get_transform():
+  return load("transform.npy", allow_pickle=True)
   
 placeholder = st.empty()
 
@@ -24,6 +26,8 @@ with placeholder.container():
 
 if showMap:
   embedding = get_model().encode([interp])
+  embedding = embedding - embedding.mean(axis=0, keepdims=True)
+  embedding = np.matmul(embedding, get_transform())
   st.write(interp)
   st.write(str(embedding))
 
