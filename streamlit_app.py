@@ -39,7 +39,7 @@ if showMap:
   fig_handle = pl.load(open('kde.pickle','rb'))
   ax = fig_handle.get_axes()
   #fig_handle.title(interp)
-  ax[0].vlines(x=your_point[:,0], ymin=your_point[:,1], ymax=your_point[:,1]+0.09, color='k')
+  ax[0].vlines(x=your_point[:,0], ymin=your_point[:,1], ymax=your_point[:,1]+0.085, color='k')
   ax[0].scatter(your_point[:,0], your_point[:,1]+0.1, color='k', s=100)
   ax[0].scatter(your_point[:,0], your_point[:,1]+0.1, color='tab:red', s=50)
   #ax[0].set_title("\""+interp+"\"", fontsize=30)
