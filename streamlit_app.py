@@ -33,7 +33,8 @@ if showMap:
   st.write(your_point)
   
   fig_handle = pl.load(open('kde.pickle','rb'))
-  fig_handle.show()
+  plt._backend_mod.new_figure_manager_given_figure(1,fig_handle)
+  #fig_handle.show()
 
 
 
