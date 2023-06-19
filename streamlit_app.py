@@ -4,9 +4,9 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-#@st.cache_resource
-#def get_model():
-#  return SentenceTransformer('all-mpnet-base-v2')
+@st.cache_resource
+def get_model():
+  return SentenceTransformer('all-mpnet-base-v2')
   
 placeholder = st.empty()
 
