@@ -1,2 +1,1 @@
-sentence_transformers
-adjust_text
+sentence_transformers==2.2.2
