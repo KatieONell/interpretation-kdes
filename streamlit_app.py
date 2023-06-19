@@ -20,11 +20,11 @@ with placeholder.container():
 @st.cache_resource
 def get_model():
   return SentenceTransformer('all-mpnet-base-v2')
-  
+model = get_model()
+
 #after submitting an interpretation
 if submit_button:
   st.write(interp)
-  model = get_model()
   embeddings = model.encode([interp])
   st.write(str(embeddings))
 
