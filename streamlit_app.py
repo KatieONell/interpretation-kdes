@@ -6,7 +6,10 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+@st.cache_resource
+def get_model():
+  return SentenceTransformer('all-mpnet-base-v2')
+  
 placeholder = st.empty()
 
 with placeholder.container():
@@ -16,11 +19,11 @@ with placeholder.container():
   submit_button = form.form_submit_button(label='Submit')
   if submit_button:
     placeholder.empty()
+    model = get_model()
+    embedding = model.encode([interp])
 
-@st.cache_resource
-def get_model():
-  return SentenceTransformer('all-mpnet-base-v2')
-model = get_model()
+st.write(interp)
+st.write(str(embeddings))
 
 #after submitting an interpretation
 #if submit_button:
