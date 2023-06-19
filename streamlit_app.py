@@ -1,5 +1,4 @@
-!pip install adjustText
-!pip install sentence_transformers
+#!pip install sentence_transformers
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-mpnet-base-v2')
 
