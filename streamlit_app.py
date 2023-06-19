@@ -26,10 +26,10 @@ with placeholder.container():
 
 if showMap:
   embedding = get_model().encode([interp])
-  embedding = embedding - embedding.mean(axis=0, keepdims=True)
-  embedding = np.matmul(embedding, get_transform())
+  input = embedding - embedding.mean(axis=0, keepdims=True)
+  your_point = np.matmul(input, get_transform())
   st.write(interp)
-  st.write(str(embedding))
+  st.write(your_point)
 
 
 
