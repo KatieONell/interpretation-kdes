@@ -9,8 +9,13 @@ import numpy as np
 def get_model():
   return SentenceTransformer('all-mpnet-base-v2')
 
+@st.cache_data
 def get_transform():
   return np.load("transform.npy", allow_pickle=True)
+
+@st.cache_data
+def get_mean_sub():
+  return np.load("mean_sub.npy", allow_pickle=True)
   
 placeholder = st.empty()
 
@@ -28,7 +33,7 @@ with placeholder.container():
 if showMap:
   embedding = get_model().encode([interp])
   st.write(embedding)
-  input = embedding - embedding.mean(axis=0, keepdims=True)
+  input = embedding - get_mean_sub()
   st.write(input)
   your_point = np.matmul(input, get_transform())
   st.write(your_point)
