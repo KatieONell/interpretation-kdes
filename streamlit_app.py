@@ -20,8 +20,8 @@ with placeholder.container():
     embedding = model.encode([interp])
     placeholder.empty()
 
-st.write(interp)
-st.write(str(embedding))
+    st.write(interp)
+    st.write(str(embedding))
 
 
 
