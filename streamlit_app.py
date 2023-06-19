@@ -1,6 +1,5 @@
 #!pip install sentence_transformers
 from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('all-mpnet-base-v2')
 
 import streamlit as st
 import matplotlib.pyplot as plt
