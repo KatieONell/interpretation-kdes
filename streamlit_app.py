@@ -9,7 +9,7 @@ def get_model():
   return SentenceTransformer('all-mpnet-base-v2')
 
 def get_transform():
-  return load("transform.npy", allow_pickle=True)
+  return np.load("transform.npy", allow_pickle=True)
   
 placeholder = st.empty()
 
