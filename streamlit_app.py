@@ -18,14 +18,15 @@ with placeholder.container():
     placeholder.empty()
 
 #after submitting an interpretation
-st.write(interp)
-
-@st.cache_resource
-def get_model():
-  return SentenceTransformer('all-mpnet-base-v2')
-
-model = get_model()
-embeddings = model.encode([interp])
-st.write(str(embeddings))
+if submit_button:
+  st.write(interp)
+  
+  @st.cache_resource
+  def get_model():
+    return SentenceTransformer('all-mpnet-base-v2')
+  
+  model = get_model()
+  embeddings = model.encode([interp])
+  st.write(str(embeddings))
 
   
