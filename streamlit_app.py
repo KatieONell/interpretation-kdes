@@ -40,7 +40,7 @@ if showMap:
   #fig_handle.title(interp)
   ax[0].scatter(your_point[:,0], your_point[:,1], color='k', s=100)
   ax[0].scatter(your_point[:,0], your_point[:,1], color='tab:red', s=50)
-  ax[0].set_title('Your interpretation: '+interp, fontsize=30)
+  ax[0].set_title("\""+interp+"\"", fontsize=30)
   st.pyplot(fig_handle)
 
 
