@@ -21,7 +21,7 @@ placeholder = st.empty()
 
 showMap = False
 with placeholder.container():
-  st.image("https://i.imgur.com/VeuZ9cG.gif", width=700)
+  st.image("https://i.imgur.com/FpTf3hb.gif", width=700)
   form = st.form(key='my_form')
   interp = form.text_input(label="What is the relationship between these two people? Who are they to each other?", key='samplekey')
   embedding = ''
