@@ -32,7 +32,7 @@ if showMap:
 
   
   fig_handle = pl.load(open('kde.pickle','rb'))
-  fig_handle.title(interp)
+  #fig_handle.title(interp)
   fig_handle.scatter(your_point[:,0], your_point[:,1])
   st.pyplot(fig_handle)
 
