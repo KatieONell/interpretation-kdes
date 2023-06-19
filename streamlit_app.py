@@ -31,10 +31,14 @@ if showMap:
   your_point = np.matmul(input, get_transform())
   st.write(interp)
   st.write(your_point)
+
   
   fig_handle = pl.load(open('kde.pickle','rb'))
-  plt._backend_mod.new_figure_manager_given_figure(1,fig_handle)
-  #fig_handle.show()
+  dummy = plt.figure()
+  new_manager = dummy.canvas.manager
+  new_manager.canvas.figure = fig_handle
+  fig_handle.set_canvas(new_manager.canvas)
+  fig_handle.show()
 
 
 
