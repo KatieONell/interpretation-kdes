@@ -10,8 +10,8 @@ with placeholder.container():
   if submit_button:
     interpretation = interp
     placeholder.empty()
-    st.write(interpretation)
-  
+st.write(interpretation)
+st.write(interp)
   #interp = st.text_input("What is the relationship between these two people? Who are they to each other?")
   #clicked = st.button("submit")
   #if clicked:
