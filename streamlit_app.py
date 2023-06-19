@@ -27,8 +27,11 @@ with placeholder.container():
 
 if showMap:
   embedding = get_model().encode([interp])
+  st.write(embedding)
   input = embedding - embedding.mean(axis=0, keepdims=True)
+  st.write(input)
   your_point = np.matmul(input, get_transform())
+  st.write(your_point)
 
   
   fig_handle = pl.load(open('kde.pickle','rb'))
