@@ -29,16 +29,11 @@ if showMap:
   embedding = get_model().encode([interp])
   input = embedding - embedding.mean(axis=0, keepdims=True)
   your_point = np.matmul(input, get_transform())
-  st.write(interp)
-  st.write(your_point)
 
   
   fig_handle = pl.load(open('kde.pickle','rb'))
-  #dummy = plt.figure()
-  #new_manager = dummy.canvas.manager
-  #new_manager.canvas.figure = fig_handle
-  #fig_handle.set_canvas(new_manager.canvas)
-  #fig_handle.show()
+  fig_handle.title(interp)
+  fig_handle.scatter(your_point[:,0], your_point[:,1])
   st.pyplot(fig_handle)
 
 
