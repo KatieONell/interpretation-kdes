@@ -34,11 +34,12 @@ if showMap:
 
   
   fig_handle = pl.load(open('kde.pickle','rb'))
-  dummy = plt.figure()
-  new_manager = dummy.canvas.manager
-  new_manager.canvas.figure = fig_handle
-  fig_handle.set_canvas(new_manager.canvas)
-  fig_handle.show()
+  #dummy = plt.figure()
+  #new_manager = dummy.canvas.manager
+  #new_manager.canvas.figure = fig_handle
+  #fig_handle.set_canvas(new_manager.canvas)
+  #fig_handle.show()
+  st.pyplot(fig_handle)
 
 
 
