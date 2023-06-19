@@ -16,12 +16,12 @@ with placeholder.container():
   interp = form.text_input(label="What is the relationship between these two people? Who are they to each other?", key='samplekey')
   submit_button = form.form_submit_button(label='Submit')
   if submit_button:
-    #model = get_model()
-    #embedding = model.encode([interp])
+    model = get_model()
+    embedding = model.encode([interp])
     placeholder.empty()
 
 st.write(interp)
-st.write(str(embeddings))
+st.write(str(embedding))
 
 
 
