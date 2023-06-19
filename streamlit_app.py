@@ -17,9 +17,9 @@ with placeholder.container():
   interp = form.text_input(label="What is the relationship between these two people? Who are they to each other?")
   submit_button = form.form_submit_button(label='Submit')
   if submit_button:
-    placeholder.empty()
     model = get_model()
     embedding = model.encode([interp])
+    placeholder.empty()
 
 st.write(interp)
 st.write(str(embeddings))
