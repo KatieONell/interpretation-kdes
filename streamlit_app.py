@@ -1,4 +1,5 @@
 from sentence_transformers import SentenceTransformer
+import pickle as pl
 
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -30,6 +31,9 @@ if showMap:
   your_point = np.matmul(input, get_transform())
   st.write(interp)
   st.write(your_point)
+  
+  fig_handle = pl.load(open('kde.pickle','rb'))
+  fig_handle.show()
 
 
 
