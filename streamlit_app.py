@@ -1,4 +1,12 @@
+!pip install adjustText
+!pip install sentence_transformers
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('all-mpnet-base-v2')
+
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 placeholder = st.empty()
 
@@ -8,14 +16,10 @@ with placeholder.container():
   interp = form.text_input(label="What is the relationship between these two people? Who are they to each other?")
   submit_button = form.form_submit_button(label='Submit')
   if submit_button:
-    interpretation = interp
     placeholder.empty()
-st.write(interpretation)
+
+#after submitting an interpretation
 st.write(interp)
-  #interp = st.text_input("What is the relationship between these two people? Who are they to each other?")
-  #clicked = st.button("submit")
-  #if clicked:
-  #  st.write(interpretation)
-  #  placeholder.empty()
+
   
   
