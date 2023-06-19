@@ -11,6 +11,7 @@ def get_model():
   
 placeholder = st.empty()
 
+showMap = False
 with placeholder.container():
   st.image("https://i.imgur.com/VeuZ9cG.gif", width=700)
   form = st.form(key='my_form')
@@ -19,7 +20,10 @@ with placeholder.container():
   submit_button = form.form_submit_button(label='Submit')
   if submit_button:
     placeholder.empty()
-    embedding = get_model().encode([interp])
+    showMap = True
+
+if showMap:
+  embedding = get_model().encode([interp])
   st.write(interp)
   st.write(str(embedding))
 
