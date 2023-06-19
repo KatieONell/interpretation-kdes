@@ -8,9 +8,9 @@ with placeholder.container():
   interp = form.text_input(label="What is the relationship between these two people? Who are they to each other?")
   submit_button = form.form_submit_button(label='Submit')
   if submit_button:
-    st.write(interp)
+    interpretation = interp
     placeholder.empty()
-  
+    st.write(interpretation)
   
   #interp = st.text_input("What is the relationship between these two people? Who are they to each other?")
   #clicked = st.button("submit")
