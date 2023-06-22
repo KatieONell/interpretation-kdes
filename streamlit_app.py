@@ -44,6 +44,8 @@ if showMap:
   ax[0].scatter(your_point[:,0], your_point[:,1]+0.1, color='tab:red', s=50)
   #ax[0].set_title("\""+interp+"\"", fontsize=30)
   st.pyplot(fig_handle)
+  st.write('')
+  st.write('Grab a pen and add your datapoint to the poster!')
 
 
 
